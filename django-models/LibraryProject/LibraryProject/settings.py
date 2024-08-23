@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
+    'relationship_app',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
@@ -76,7 +77,7 @@ WSGI_APPLICATION = 'LibraryProject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'mydatabase',
+        'NAME': 'Library',
         'USER': 'root',
         'PASSWORD': '1234',
         'HOST': 'localhost',
