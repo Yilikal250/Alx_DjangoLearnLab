@@ -16,7 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
+from .views import book_list, LibraryDetailView # type: ignore
 urlpatterns = [
     path('admin/', admin.site.urls),
+     # URL pattern for the function-based view that lists all books
+    path('books/', book_list, name='book_list'),
+    
+    # URL pattern for the class-based view that displays details of a specific library
+    path('library/<int:pk>/', LibraryDetailView.as_view(), name='library_detail'),
 ]
