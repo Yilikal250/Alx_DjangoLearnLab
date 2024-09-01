@@ -6,6 +6,8 @@ from django.contrib.auth import views as auth_views
 from django.urls import reverse_lazy
 from django.views.generic.edit import FormView
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import login
+from django.contrib.auth.forms import UserCreationForm
 def book_list(request):
     """View to list all books with their titles and authors."""
     books = Book.objects.all()  # Fetch all book instances from the database
